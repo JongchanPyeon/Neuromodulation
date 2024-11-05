@@ -10,7 +10,7 @@ import json
 import time
 import os
 
-from models.DenseNet import DenseNet          
+from model.DenseNet import DenseNet          
 
 
 def initialize_weights(model):
