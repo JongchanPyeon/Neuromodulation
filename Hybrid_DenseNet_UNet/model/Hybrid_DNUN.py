@@ -2,7 +2,8 @@
 # Use the pre-trained encoder as the encoder of UNet. 
 # No bottleneck layer
 # Train Decoder part only.
-
+import os
+import sys
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -12,8 +13,7 @@ from torch.utils.data import DataLoader, Dataset
 densenet_path = os.path.abspath("../DenseNet/model")
 sys.path.append(densenet_path)
 from DenseNet import DenseNet
-
-from model.UNet import DecoderBlock
+from UNet import DecoderBlock
 
 
 ## Define DenseNet Encoder with UNet Decoder : No bottleneck layer
